@@ -20,7 +20,7 @@
 	
 	function readcomments($parentid){
 		$returnstring = "";
-		$sql = "SELECT * FROM testcomments WHERE parentid = '" . $parentid ."'";
+		$sql = "SELECT * FROM testcomments WHERE parentid = '" . $parentid ."' ORDER BY upvotes DESC";
 		$queryresult = mysql_query($sql);
 		
 		if(!$queryresult){
